@@ -3,21 +3,23 @@ import { CommonEventFunction, StandardProps } from './common'
 interface RichTextProps extends StandardProps {
   /** 文本是否可选，该属性会使节点显示为 block
    * @default false
-   * @supported weapp
+   * @supported weapp, h5
    */
   userSelect?: boolean
 
-  /** 节点列表/ HTML String */
+  /** 节点列表/ HTML String
+   * @supported weapp, alipay, swan, tt, qq, h5, rn
+   */
   nodes?: Nodes
 
   /** 显示连续空格
-   * @supported weapp, qq, rn
+   * @supported weapp, alipay, tt, qq, h5, rn
    */
   space?: keyof RichTextProps.TSpace
 
   /** 富文本是否可以长按选中，可用于复制，粘贴，长按搜索等场景
    * @default false（基础库 3.150.1 以前版本）true（基础库 3.150.1 及以后版本）
-   * @supported swan
+   * @supported swan, h5
    */
   selectable?: string
 
@@ -118,7 +120,7 @@ declare namespace RichTextProps {
 
 /** 富文本
  * @classification base
- * @supported weapp, swan, alipay, tt, h5, rn
+ * @supported weapp, swan, alipay, tt, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * class App extends Components {

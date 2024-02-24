@@ -31,6 +31,12 @@ interface SliderProps extends StandardProps, FormItemProps {
    */
   value?: number
 
+  /** 设置 React 非受控状态下的初始取值
+   * @supported h5, rn, weapp, alipay, swan, tt, qq, jd, h5, rn, harmony_hybrid
+   * @unique
+   */
+  defaultValue?: string
+
   /** 背景条的颜色（请使用 backgroundColor）
    * @default "#e9e9e9"
    * @supported weapp, tt, qq, jd
@@ -118,7 +124,7 @@ declare namespace SliderProps {
 
 /** 滑动选择器
  * @classification forms
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class PageView extends Component {
