@@ -38,7 +38,7 @@ interface ViewProps extends StandardProps {
    * @supported alipay
    * @default false
    */
-  disableScroll?: string
+  disableScroll?: boolean
 
   /** 是否隐藏。
    * @supported alipay
@@ -142,7 +142,7 @@ interface ViewProps extends StandardProps {
 
 /** 视图容器
  * @classification viewContainer
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class PageView extends Component {

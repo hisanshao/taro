@@ -3,7 +3,7 @@ import { StandardProps } from './common'
 interface RootPortalProps extends StandardProps {
   /**
    * 是否从页面中脱离出来
-   * @supported weapp
+   * @supported weapp, alipay
    * @default true
    */
   enable?: boolean
@@ -38,5 +38,4 @@ interface RootPortalProps extends StandardProps {
  * ```
  */
 declare const RootPortal: ComponentType<RootPortalProps>
-
 export { RootPortal, RootPortalProps }

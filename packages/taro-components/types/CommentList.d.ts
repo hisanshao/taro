@@ -65,6 +65,11 @@ interface CommentListProps extends StandardProps {
    * @supported swan
    */
   onViewMore?: CommonEventFunction
+
+  /** 评论发布成功时触发，返回数据为 {status, data:{srid}}
+   * @supported swan
+   */
+  onReply?: CommonEventFunction
 }
 namespace CommentListProps {
   interface ICommentParam {
