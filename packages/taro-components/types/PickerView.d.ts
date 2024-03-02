@@ -6,6 +6,12 @@ interface PickerViewProps extends StandardProps {
    */
   value?: number[]
 
+  /** 设置 React 非受控状态下的初始取值
+   * @supported rn, weapp, alipay, swan, tt, qq, jd, rn
+   * @unique
+   */
+  defaultValue?: number[]
+
   /** 设置选择器中间选中框的样式
    * @supported weapp, alipay, swan, tt, qq, jd, rn
    */
@@ -27,7 +33,7 @@ interface PickerViewProps extends StandardProps {
   maskClass?: string
 
   /** 是否在手指松开时立即触发 change 事件。若不开启则会在滚动动画结束后触发 change 事件。
-   * @supported weapp, tt
+   * @supported weapp, alipay, tt
    * @default false
    */
   immediateChange?: boolean
@@ -66,7 +72,7 @@ declare namespace PickerViewProps {
 /** 嵌入页面的滚动选择器
  * 其中只可放置 picker-view-column 组件，其它节点不会显示
  * @classification forms
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class Picks extends Component {

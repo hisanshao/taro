@@ -64,7 +64,7 @@ interface ProgressProps extends StandardProps {
 
   /** 进度增加 1% 所需毫秒数
    * @default 30
-   * @supported weapp, swan, jd, h5
+   * @supported weapp, swan, tt, jd, h5
    */
   duration?: number
 
@@ -74,14 +74,14 @@ interface ProgressProps extends StandardProps {
   ariaLabel?: string
 
   /** 动画完成事件
-   * @supported weapp, qq, jd, h5
+   * @supported weapp, tt, qq, jd, h5
    */
   onActiveEnd?: CommonEventFunction
 }
 
 /** 进度条。组件属性的长度单位默认为 px
  * @classification base
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * export default class PageView extends Component {

@@ -45,6 +45,11 @@ interface CommentDetailProps extends StandardProps {
    * @supported swan
    */
   onDelete?: CommonEventFunction
+
+  /** 评论发布成功时触发，返回数据为 {status, data:{srid}}
+   * @supported swan
+   */
+  onReply?: CommonEventFunction
 }
 namespace CommentDetailProps {
   interface ICommentParam {

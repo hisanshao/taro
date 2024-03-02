@@ -32,6 +32,8 @@ interface SwiperProps extends StandardProps {
   current?: number
 
   /** 当前所在滑块的 item-id ，不能与 current 被同时指定
+   * @supported swan, tt, qq, jd, h5
+   * @weapp deprecated
    * @default ""
    */
   currentItemId?: string
@@ -75,7 +77,7 @@ interface SwiperProps extends StandardProps {
   /**
    * 当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素
    * @default false
-   * @supported weapp, alipay, jd
+   * @supported weapp, alipay
    */
   snapToEdge?: boolean
 
@@ -168,13 +170,25 @@ interface SwiperProps extends StandardProps {
    */
   disableTouchmove?: string
 
+  /** 改变 current 时使用动画过渡
+   * @supported weapp
+   * @default true
+   */
+  scrollWithAnimation?: boolean
+
+  /** 缓存区域大小，值为 1 表示提前渲染上下各一屏区域（swiper 容器大小）
+   * @supported weapp
+   * @default 0
+   */
+  cacheExtent?: number
+
   /** current 改变时会触发 change 事件
    * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
    */
   onChange?: CommonEventFunction<SwiperProps.onChangeEventDetail>
 
   /** swiper-item 的位置发生改变时会触发 transition 事件
-   * @supported weapp, alipay, tt, qq, jd
+   * @supported weapp, alipay, tt, qq
    */
   onTransition?: CommonEventFunction<SwiperProps.onTransitionEventDetail>
 
@@ -247,7 +261,7 @@ declare namespace SwiperProps {
 /** 滑块视图容器。其中只可放置 swiper-item 组件，否则会导致未定义的行为。
  * > 不要为 `SwiperItem` 设置 **style** 属性，可以通过 class 设置样式。[7147](https://github.com/NervJS/taro/issues/7147)
  * @classification viewContainer
- * @supported weapp, alipay, swan, tt, qq, jd, h5, rn
+ * @supported weapp, alipay, swan, tt, qq, jd, h5, rn, harmony, harmony_hybrid
  * @example_react
  * ```tsx
  * class App extends Component {
